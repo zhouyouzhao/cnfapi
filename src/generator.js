@@ -100,6 +100,7 @@ function hasBaseURL(url) {
  */
 function getConfig(conf, defaultConf, proxy) {
   let apiConfig = {
+      ...conf,
       url: '',
       baseURL: defaultConf.baseURL,
       env: defaultConf.env,
