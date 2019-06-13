@@ -100,7 +100,6 @@ function hasBaseURL(url) {
  */
 function getConfig(conf, defaultConf, proxy) {
   let apiConfig = {
-      ...conf,
       url: '',
       baseURL: defaultConf.baseURL,
       env: defaultConf.env,
@@ -133,7 +132,7 @@ function getConfig(conf, defaultConf, proxy) {
     }
     proxy[key] = apiConfig[key];
   });
-  return apiConfig;
+  return merge({}, conf, apiConfig);;
 }
 
 function getRestfulUrl(url = '', data = {}) {
