@@ -132,7 +132,7 @@ function getConfig(conf, defaultConf, proxy) {
     }
     proxy[key] = apiConfig[key];
   });
-  return merge({}, conf, apiConfig);;
+  return merge({}, conf, apiConfig);
 }
 
 function getRestfulUrl(url = '', data = {}) {
@@ -343,7 +343,7 @@ function getProxy(fn, apiConfig = {}) {
               apiConfig.statusText = res.statusText;
 
               const isOpenResInterceptor = typeof apiOpts.openResInterceptor === 'function' && apiOpts.openResInterceptor.call(apiConfig, serverData);
-              if (isOpenResInterceptor && reqTime < retryTimes) {
+              if (isOpenResInterceptor) {
                 return apiOpts.resInterceptor.call(apiConfig, serverData, (nOpts = {}) => {
                   const data = merge(reqData.data, nOpts.data),
                     headers = merge(apiOpts.headers, nOpts.headers);

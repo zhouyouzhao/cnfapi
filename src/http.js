@@ -2,7 +2,8 @@
  * 借助第三方请求库
  */
 
-// import axios from 'axios';
+import axios from 'axios';
+import qs from 'qs';
 import assign from 'lodash/assign';
 
 const reqConfig = {
@@ -32,11 +33,8 @@ const reqConfig = {
  */
 const https = {
   browser(config) {
-    let axios = require('axios'),
-      qs = require('qs'),
-      { data } = config,
-      nData = Array.isArray(data) ? [] : {},
-      { headers } = config,
+    const { data, headers } = config;
+    let nData = Array.isArray(data) ? [] : {},
       val = '';
     Object.keys(headers).forEach((header) => {
       if (header.toLowerCase() === 'content-type') {
