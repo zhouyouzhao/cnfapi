@@ -11,11 +11,7 @@ module.exports = {
   },
   plugins: ['import'],
   extends: ['airbnb'],
-  globals: {
-    my: true,
-    wx: true,
-    swan: true,
-  },
+  globals: {},
   // add your custom rules here
   rules: {
     'no-console': 0,

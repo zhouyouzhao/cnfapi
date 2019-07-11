@@ -12,12 +12,12 @@ yarn-debug.log*
 yarn-error.log*
 selenium-debug.log*
 src/
-.babelrc
-.browserslistrc
+src/entry/.babelrc
 .eslintignore
 .eslintrc.js
 .huskyrc
 .gitignore
 commitlint.config.js
 package-lock.json
-webpack.config.js
+rollup.config.es5.js
+rollup.config.js

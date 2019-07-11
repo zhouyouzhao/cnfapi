@@ -12,10 +12,9 @@
 import urlParse from 'url-parse';
 import merge from 'lodash/merge';
 import assign from 'lodash/assign';
-import http from './http.js';
-import jsonSchema2api from './jsonSchema2api.js';
-import Proxy from './Proxy.js';
-import Event from './events.js';
+import jsonSchema2api from './jsonSchema2api';
+import Proxy from './Proxy';
+import http from './http';
 
 /**
  * errCode

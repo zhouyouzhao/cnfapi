@@ -1,5 +1,5 @@
 scripts/**/*.js
 node_modules/*.js
-src/Proxy.js
-src/pipe.js
-src/jsonSchema2api.js
+src/lib/**/*.js
+rollup.config.es5.js
+rollup.config.js
