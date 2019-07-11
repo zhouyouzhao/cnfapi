@@ -104,3 +104,21 @@ const api = new Api({
    });
 
 ```
+
+### request拦截器
+
+```javascript
+api._before = function _before(apiOpts, apiConf, next) {
+  // apiOpts为调用时传入的参数，如：
+  /*
+  {
+    data: {
+      param1: 123
+    }
+  }
+  */
+  // apiConf 该接口调用的配置参数
+  // 可在_before内对参数做处理
+  next(apiOpts);
+};
+```
