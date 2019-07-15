@@ -185,7 +185,7 @@ class Api {
      * @param cb
      * @private
      */
-  _before(apiConf, cb) {
+  _before(apiOpts, apiConf, cb) {
     cb(apiConf);
   }
 
