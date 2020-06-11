@@ -11,7 +11,7 @@ function getType(val) {
 }
 
 class Api {
-  constructor(conf = {}, apiList = {}) {
+  constructor(conf = {}, apiList = {}, opts = {}) {
     const listType = this.getType(apiList);
     if (this.getType(conf) !== 'object' || (listType !== 'object' && listType !== 'array')) {
       throw new Error('constructor params require Object type');
@@ -39,7 +39,7 @@ class Api {
   get initConf() {
     return {
       baseURL: {
-        required: true,
+        required: opts.baseURL || true,
         errMsg: 'baseURL is required',
         vaildFn(val) {
           return {
