@@ -1,6 +1,6 @@
 {
   "name": "cnfapi",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A lib project with ziu",
   "author": "bugszhou | Email:bugszhou@outlook.com",
   "main": "index.js",
