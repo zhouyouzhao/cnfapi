@@ -1,3 +1,12 @@
+## [2.1.1](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.0...v2.1.1) (2020-06-11)
+
+
+### Bug Fixes
+
+* 修改opts ([46b2893](https://github.com/zhouyouzhao/cnfapi/commit/46b28937a86a9f422e6d6f9f480087f7f08b35c0))
+
+
+
 # [2.1.0](https://github.com/zhouyouzhao/cnfapi/compare/v2.0.2...v2.1.0) (2020-06-11)
 
 
