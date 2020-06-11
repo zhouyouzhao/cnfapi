@@ -40,7 +40,7 @@ class Api {
   get initConf() {
     return {
       baseURL: {
-        required: this.initConfopts.baseURL || true,
+        required: this.initConfopts.baseURL === undefined ? true : this.initConfopts.baseURL,
         errMsg: 'baseURL is required',
         vaildFn(val) {
           return {
