@@ -1,3 +1,12 @@
+## [2.1.3](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.2...v2.1.3) (2020-06-11)
+
+
+### Features
+
+* 增加配置 ([43aa7b1](https://github.com/zhouyouzhao/cnfapi/commit/43aa7b1a8737ce69404d66cf2ee542e0ed8ff5ce))
+
+
+
 ## [2.1.2](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.1...v2.1.2) (2020-06-11)
 
 
