@@ -16,6 +16,7 @@ class Api {
     if (this.getType(conf) !== 'object' || (listType !== 'object' && listType !== 'array')) {
       throw new Error('constructor params require Object type');
     }
+    this.initConfopts = opts;
     const _tempApiList = JSON.parse(JSON.stringify(apiList));
     this.merge = merge;
     this.outConf = conf;
@@ -39,7 +40,7 @@ class Api {
   get initConf() {
     return {
       baseURL: {
-        required: opts.baseURL || true,
+        required: this.initConfopts.baseURL || true,
         errMsg: 'baseURL is required',
         vaildFn(val) {
           return {

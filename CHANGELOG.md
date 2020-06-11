@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/zhouyouzhao/cnfapi/compare/v2.0.2...v2.1.0) (2020-06-11)
+
+
+### Features
+
+* 增加可配置init参数 ([cb185fb](https://github.com/zhouyouzhao/cnfapi/commit/cb185fb3e14e665839a65f3091e1973c7937a23e))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/zhouyouzhao/cnfapi/compare/v2.0.1...v2.0.2) (2019-07-15)
 

@@ -6735,7 +6735,13 @@
   var wrap_1 = wrap$1;
   followRedirects.wrap = wrap_1;
 
-  var _from = "axios";
+  var _args = [
+  	[
+  		"axios@0.19.0",
+  		"/Users/gary/My/front/cnfapi"
+  	]
+  ];
+  var _from = "axios@0.19.0";
   var _id = "axios@0.19.0";
   var _inBundle = false;
   var _integrity = "sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==";
@@ -6743,23 +6749,21 @@
   var _phantomChildren = {
   };
   var _requested = {
-  	type: "tag",
+  	type: "version",
   	registry: true,
-  	raw: "axios",
+  	raw: "axios@0.19.0",
   	name: "axios",
   	escapedName: "axios",
-  	rawSpec: "",
+  	rawSpec: "0.19.0",
   	saveSpec: null,
-  	fetchSpec: "latest"
+  	fetchSpec: "0.19.0"
   };
   var _requiredBy = [
-  	"#USER",
   	"/"
   ];
   var _resolved = "https://registry.npmjs.org/axios/-/axios-0.19.0.tgz";
-  var _shasum = "8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8";
-  var _spec = "axios";
-  var _where = "F:\\front\\cnfapi";
+  var _spec = "0.19.0";
+  var _where = "/Users/gary/My/front/cnfapi";
   var author = {
   	name: "Matt Zabriskie"
   };
@@ -6769,7 +6773,6 @@
   var bugs = {
   	url: "https://github.com/axios/axios/issues"
   };
-  var bundleDependencies = false;
   var bundlesize = [
   	{
   		path: "./dist/axios.min.js",
@@ -6780,7 +6783,6 @@
   	"follow-redirects": "1.5.10",
   	"is-buffer": "^2.0.2"
   };
-  var deprecated = false;
   var description = "Promise based HTTP client for the browser and node.js";
   var devDependencies = {
   	bundlesize: "^0.17.0",
@@ -6848,6 +6850,7 @@
   var typings = "./index.d.ts";
   var version = "0.19.0";
   var _package = {
+  	_args: _args,
   	_from: _from,
   	_id: _id,
   	_inBundle: _inBundle,
@@ -6857,16 +6860,13 @@
   	_requested: _requested,
   	_requiredBy: _requiredBy,
   	_resolved: _resolved,
-  	_shasum: _shasum,
   	_spec: _spec,
   	_where: _where,
   	author: author,
   	browser: browser$1,
   	bugs: bugs,
-  	bundleDependencies: bundleDependencies,
   	bundlesize: bundlesize,
   	dependencies: dependencies,
-  	deprecated: deprecated,
   	description: description,
   	devDependencies: devDependencies,
   	homepage: homepage,
@@ -6881,6 +6881,7 @@
   };
 
   var _package$1 = /*#__PURE__*/Object.freeze({
+    _args: _args,
     _from: _from,
     _id: _id,
     _inBundle: _inBundle,
@@ -6890,16 +6891,13 @@
     _requested: _requested,
     _requiredBy: _requiredBy,
     _resolved: _resolved,
-    _shasum: _shasum,
     _spec: _spec,
     _where: _where,
     author: author,
     browser: browser$1,
     bugs: bugs,
-    bundleDependencies: bundleDependencies,
     bundlesize: bundlesize,
     dependencies: dependencies,
-    deprecated: deprecated,
     description: description,
     devDependencies: devDependencies,
     homepage: homepage,
@@ -8751,7 +8749,7 @@
 
   var EventEmit=function(){function EventEmit(){classCallCheck(this,EventEmit);}return createClass(EventEmit,[{key:"on",value:function on(){var _ref=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},_ref$evt=_ref.evt,evt=void 0===_ref$evt?"noevt":_ref$evt,handle=_ref.handle,events=this.events;delete this.events;var event=events[evt];if(event||(event=[]),"function"!=typeof handle)throw new Error("Event Handle Not a Function in ".concat(evt,"!"));event.push(handle),events[evt]=event,defineProperty$1(this,"events",{get:function get(){return events},configurable:!0});}},{key:"emit",value:function emit(){var _ref2=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},_ref2$evt=_ref2.evt,evt=void 0===_ref2$evt?"noevt":_ref2$evt,_ref2$data=_ref2.data,data=void 0===_ref2$data?{}:_ref2$data,_ref2$callback=_ref2.callback,callback=void 0===_ref2$callback?function(){}:_ref2$callback;evt&&"noevt"!==evt||console.warn("The event name Not Input! You will emit the default event!!"),this.pipe({evt:evt,data:data}).end(function(){callback(null,this.source);})["catch"](function(err){callback(err);});}},{key:"remove",value:function remove(){var _ref3=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},evt=_ref3.evt;return evt||this.events[evt]?void delete this.events[evt]:console.error("Please Input correct Event Name in remove Function!!")}},{key:"pipe",value:function pipe$1(opts){var eventHandles=this.events[opts.evt];if(!isArray$2(eventHandles))return console.log("Event Not Have Correct Handle! Event Name: ".concat(opts.evt,"!!")),!1;var pipeObj=pipe({data:{body:opts.data,source:null}}).next(function(){eventHandles.forEach(function(event){pipeObj.next(function(){var isAsync=!1,requestObj={source:this.source,body:this.body},responseObj={end:function(_this){return function(err,source){return isAsync=!0,err?_this.next(err):void(_this.source=source,_this.next())}}(this)},source=event(requestObj,responseObj);isAsync||"undefined"==typeof source||null===source||(this.source=source,this.next());});}),this.next();}).start();return pipeObj}},{key:"events",get:function get(){return {noevt:[function(){}]}}}]),EventEmit}();
 
-  function _getType(val){return Object.prototype.toString.call(val).slice(8,-1).toLowerCase()}var Api=function(){function Api(){var conf=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},apiList=1<arguments.length&&void 0!==arguments[1]?arguments[1]:{};classCallCheck(this,Api);var listType=this.getType(apiList);if("object"!==this.getType(conf)||"object"!==listType&&"array"!==listType)throw new Error("constructor params require Object type");var _tempApiList=JSON.parse(stringify$1(apiList));this.merge=merge_1,this.outConf=conf,defineProperty$1(this,"apiList",{get:function get(){return _tempApiList}}),this.init();}return createClass(Api,[{key:"init",value:function init(){this.mergeConf(this.initConf,this.outConf),generator.apply(this,[JSON.parse(stringify$1(this.apiList)),this.defaultOpts]);}},{key:"mergeConf",value:function mergeConf(obj,sources){var _this=this,temp={};if("object"!==this.getType(obj)||"object"!==this.getType(sources))throw new Error("mergeConf argument Not Object");return keys$1(obj).forEach(function(key){var val=obj[key],vaildResult=null,vaildFn=obj[key].vaildFn,defaultVal="function"==typeof obj[key]["default"]&&obj[key]["default"].apply(_this)||"";if(val.required&&!defaultVal&&!sources[key])throw new Error("".concat(val.errMsg));if(temp[key]=sources[key]||defaultVal,"function"==typeof vaildFn&&(vaildResult=vaildFn(temp[key])),null!=vaildResult&&!vaildResult.result)throw new Error("".concat(vaildResult.errMsg))}),temp}},{key:"openResInterceptor",value:function openResInterceptor(){return this.conf.openResInterceptor.apply(this,arguments)}},{key:"_before",value:function _before(apiOpts,apiConf,cb){cb(apiConf);}},{key:"getType",value:function getType(val){return _getType(val)}},{key:"conf",get:function get(){return this.mergeConf(this.initConf,this.outConf)}},{key:"initConf",get:function get(){return {baseURL:{required:!0,errMsg:"baseURL is required",vaildFn:function vaildFn(val){return {result:/^((http:\/\/)|(https:\/\/)|(:\/\/))([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}(\/)?/.test(val)||/^((http:\/\/)|(https:\/\/)|(:\/\/))(localhost)/.test(val),errMsg:"invalid baseURL"}}},timeout:{required:!0,errMsg:"timeout is required or not 0",default:function _default(){return 3e3},vaildFn:function vaildFn(val){return {result:!isNaN(val)&&0!=val,errMsg:"invalid timeout"}}},env:{required:!0,errMsg:"invalid env",default:function _default(){return "browser"},vaildFn:function vaildFn(val){var resultObj={result:-1<["browser","aliapp","weapp","swan"].indexOf(val),errMsg:"invalid env, env must in [\"browser\", \"aliapp\" ,\"weapp\", \"swan\"]"};return ("aliapp"===val||"weapp"===val)&&(window=void 0,document=void 0),"browser"===val&&(resultObj={result:window&&document&&"undefined"!=typeof window&&"undefined"!=typeof document,errMsg:"invalid env, env not in browser, env must in [\"browser\", \"aliapp\" ,\"weapp\", \"swan\"]"}),resultObj}},openResInterceptor:{required:!1,default:function _default(){return function(){return !1}}},resInterceptor:{required:!1,default:function _default(){return function(){}}},resSuccessCallback:{required:!1,default:function _default(){return function(serverData,next){next(!1,serverData);}}},resFormat:{description:"\u63A5\u53E3\u8FD4\u56DE\u683C\u5F0F",required:!1,default:function _default(){return {type:"object",properties:{retcode:{type:"string"},msg:{type:"string"},data:{type:"object"}}}}}}}},{key:"defaultOpts",get:function get(){return this.merge({method:"GET",headers:{"Content-Type":"application/x-www-form-urlencoded"}},this.outConf,this.conf)}}]),Api}();
+  function _getType(val){return Object.prototype.toString.call(val).slice(8,-1).toLowerCase()}var Api=function(){function Api(){var conf=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},apiList=1<arguments.length&&void 0!==arguments[1]?arguments[1]:{};classCallCheck(this,Api);var listType=this.getType(apiList);if("object"!==this.getType(conf)||"object"!==listType&&"array"!==listType)throw new Error("constructor params require Object type");var _tempApiList=JSON.parse(stringify$1(apiList));this.merge=merge_1,this.outConf=conf,defineProperty$1(this,"apiList",{get:function get(){return _tempApiList}}),this.init();}return createClass(Api,[{key:"init",value:function init(){this.mergeConf(this.initConf,this.outConf),generator.apply(this,[JSON.parse(stringify$1(this.apiList)),this.defaultOpts]);}},{key:"mergeConf",value:function mergeConf(obj,sources){var _this=this,temp={};if("object"!==this.getType(obj)||"object"!==this.getType(sources))throw new Error("mergeConf argument Not Object");return keys$1(obj).forEach(function(key){var val=obj[key],vaildResult=null,vaildFn=obj[key].vaildFn,defaultVal="function"==typeof obj[key]["default"]&&obj[key]["default"].apply(_this)||"";if(val.required&&!defaultVal&&!sources[key])throw new Error("".concat(val.errMsg));if(temp[key]=sources[key]||defaultVal,"function"==typeof vaildFn&&(vaildResult=vaildFn(temp[key])),null!=vaildResult&&!vaildResult.result)throw new Error("".concat(vaildResult.errMsg))}),temp}},{key:"openResInterceptor",value:function openResInterceptor(){return this.conf.openResInterceptor.apply(this,arguments)}},{key:"_before",value:function _before(apiOpts,apiConf,cb){cb(apiConf);}},{key:"getType",value:function getType(val){return _getType(val)}},{key:"conf",get:function get(){return this.mergeConf(this.initConf,this.outConf)}},{key:"initConf",get:function get(){return {baseURL:{required:opts.baseURL||!0,errMsg:"baseURL is required",vaildFn:function vaildFn(val){return {result:/^((http:\/\/)|(https:\/\/)|(:\/\/))([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}(\/)?/.test(val)||/^((http:\/\/)|(https:\/\/)|(:\/\/))(localhost)/.test(val),errMsg:"invalid baseURL"}}},timeout:{required:!0,errMsg:"timeout is required or not 0",default:function _default(){return 3e3},vaildFn:function vaildFn(val){return {result:!isNaN(val)&&0!=val,errMsg:"invalid timeout"}}},env:{required:!0,errMsg:"invalid env",default:function _default(){return "browser"},vaildFn:function vaildFn(val){var resultObj={result:-1<["browser","aliapp","weapp","swan"].indexOf(val),errMsg:"invalid env, env must in [\"browser\", \"aliapp\" ,\"weapp\", \"swan\"]"};return ("aliapp"===val||"weapp"===val)&&(window=void 0,document=void 0),"browser"===val&&(resultObj={result:window&&document&&"undefined"!=typeof window&&"undefined"!=typeof document,errMsg:"invalid env, env not in browser, env must in [\"browser\", \"aliapp\" ,\"weapp\", \"swan\"]"}),resultObj}},openResInterceptor:{required:!1,default:function _default(){return function(){return !1}}},resInterceptor:{required:!1,default:function _default(){return function(){}}},resSuccessCallback:{required:!1,default:function _default(){return function(serverData,next){next(!1,serverData);}}},resFormat:{description:"\u63A5\u53E3\u8FD4\u56DE\u683C\u5F0F",required:!1,default:function _default(){return {type:"object",properties:{retcode:{type:"string"},msg:{type:"string"},data:{type:"object"}}}}}}}},{key:"defaultOpts",get:function get(){return this.merge({method:"GET",headers:{"Content-Type":"application/x-www-form-urlencoded"}},this.outConf,this.conf)}}]),Api}();
 
   return Api;
 
