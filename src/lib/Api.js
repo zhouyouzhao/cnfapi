@@ -169,7 +169,7 @@ class Api {
       if (typeof vaildFn === 'function') {
         vaildResult = vaildFn(temp[key]);
       }
-      if (vaildResult != null && !vaildResult.result) {
+      if (val.required && vaildResult != null && !vaildResult.result) {
         throw new Error(`${vaildResult.errMsg}`);
       }
     });

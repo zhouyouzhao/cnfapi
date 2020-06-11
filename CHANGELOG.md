@@ -1,3 +1,12 @@
+## [2.1.2](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.1...v2.1.2) (2020-06-11)
+
+
+### Features
+
+* 修改兼容性 ([565d21d](https://github.com/zhouyouzhao/cnfapi/commit/565d21de4f29b3eb139e367e7ba87b83a703cb55))
+
+
+
 ## [2.1.1](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.0...v2.1.1) (2020-06-11)
 
 
