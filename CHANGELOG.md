@@ -1,3 +1,7 @@
+## [2.1.4](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.3...v2.1.4) (2021-01-18)
+
+
+
 ## [2.1.3](https://github.com/zhouyouzhao/cnfapi/compare/v2.1.2...v2.1.3) (2020-06-11)
 
 
